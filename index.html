@@ -1,0 +1,3592 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>South Agri | Commodities agrícolas e logística internacional</title>
+  <meta name="description"
+    content="A South Agri conecta produtores brasileiros a compradores internacionais com originação, comercialização, exportação, logística e frete marítimo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --black: #101413;
+      --white: #F7F6F2;
+      --ap-blue: #D4573B;
+      --grey: #b8b8b4;
+      --sa-teal: #075B52;
+      --sa-teal-deep: #043F3A;
+      --sa-terra: #D4573B;
+      --sa-terra-dark: #B8442D;
+      --body-font: "JacobsChronos", "Segoe UI", Roboto, Arial, sans-serif;
+      --display-font: "JacobsChronos", "Segoe UI", Roboto, Arial, sans-serif;
+      --page-max: 1424px;
+      --header-height: 88px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-height);
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--body-font);
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    .stat-number,
+    .brand-fallback {
+      font-family: var(--display-font);
+      font-weight: 700;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--ap-blue);
+      outline-offset: 4px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      height: var(--header-height);
+      background: var(--white);
+      border-bottom: 1px solid rgba(0, 0, 0, .12);
+      box-shadow: 0 2px 10px rgba(16, 20, 19, .045);
+    }
+
+    .header-inner {
+      width: min(100% - 40px, var(--page-max));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .brand {
+      flex: 0 0 192px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--black);
+      color: var(--white);
+      margin-bottom: -1px;
+    }
+
+    .brand img {
+      display: block;
+      width: 160px;
+      height: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .brand-fallback {
+      color: var(--white);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      text-align: center;
+    }
+
+    .main-nav {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin-left: 40px;
+    }
+
+    .nav-list,
+    .utility-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-list {
+      gap: 34px;
+    }
+
+    .utility-list {
+      gap: 31px;
+    }
+
+    .nav-link,
+    .utility-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .nav-link {
+      padding: 15px 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 400;
+      box-shadow: inset 0 0 0 transparent;
+      transition: color .22s ease, box-shadow .3s ease;
+    }
+
+    .utility-link {
+      font-weight: 500;
+    }
+
+    .nav-link.has-menu::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg) translateY(-2px);
+      transform-origin: center;
+      transition: transform .2s ease;
+    }
+
+    .nav-link.has-menu[aria-expanded="true"]::after {
+      transform: rotate(225deg) translate(-1px, -1px);
+    }
+
+    .nav-link.has-menu[aria-expanded="true"] {
+      box-shadow: inset 0 -4px 0 var(--black);
+    }
+
+    .nav-link:hover,
+    .utility-link:hover {
+      color: var(--black);
+    }
+
+    .utility-area {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .mobile-tools {
+      display: none;
+    }
+
+    .language-selector {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .language-toggle {
+      display: grid;
+      width: 34px;
+      height: 30px;
+      padding: 3px;
+      place-items: center;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .language-toggle img,
+    .language-option img {
+      display: block;
+      width: 25px;
+      height: auto;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(17, 21, 19, .16);
+    }
+
+    .language-toggle:hover,
+    .language-toggle:focus-visible {
+      background: #ededeb;
+      outline: none;
+    }
+
+    .language-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      z-index: 40;
+      min-width: 132px;
+      padding: 6px;
+      border: 1px solid #dededb;
+      background: var(--white);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .16);
+    }
+
+    .language-menu[hidden] {
+      display: none;
+    }
+
+    .language-option {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 10px;
+      color: var(--black);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .mega-menu {
+      position: absolute;
+      top: var(--header-height);
+      left: 0;
+      right: 0;
+      display: block;
+      min-height: 286px;
+      background: var(--white);
+      color: var(--black);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, .18);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-18px);
+      transform-origin: top center;
+      transition: opacity .28s ease, transform .38s cubic-bezier(.22, .61, .36, 1), visibility 0s linear .38s;
+    }
+
+    .mega-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+      transition-delay: 0s;
+    }
+
+    .mega-inner {
+      width: min(100% - 48px, var(--page-max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 50px;
+      padding: 30px 0 36px;
+    }
+
+    .mega-inner h2 {
+      margin: 0 0 20px;
+      font-size: 24px;
+      letter-spacing: -.02em;
+    }
+
+    .mega-tabs {
+      display: grid;
+      gap: 5px;
+      align-content: start;
+    }
+
+    .mega-tabs button {
+      border: 0;
+      background: transparent;
+      padding: 8px 0;
+      color: #252525;
+      text-align: left;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .mega-tabs button:hover,
+    .mega-tabs button.active {
+      text-decoration: underline;
+    }
+
+    .mega-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 46px;
+      border-left: 1px solid #d5d5d5;
+      padding-left: 46px;
+    }
+
+    .mega-content h3 {
+      margin: 0 0 15px;
+      font-size: 20px;
+    }
+
+    .mega-content ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mega-content li {
+      margin: 0 0 12px;
+      font-size: 16px;
+    }
+
+    .mega-content a:hover {
+      text-decoration: underline;
+    }
+
+    .mega-menu .mega-inner>* {
+      opacity: 0;
+      transform: translateY(-7px);
+      transition: opacity .3s ease, transform .42s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .mega-menu.open .mega-inner>* {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mega-menu.open .mega-inner> :nth-child(2) {
+      transition-delay: .05s;
+    }
+
+    .mega-menu.open .mega-inner> :nth-child(3) {
+      transition-delay: .1s;
+    }
+
+    .mega-featured {
+      display: none;
+    }
+
+    .mega-menu.about-menu {
+      min-height: calc(100vh - var(--header-height) - 13px);
+      background: var(--white);
+    }
+
+    .mega-menu.about-menu .mega-inner {
+      width: min(100% - 40px, var(--page-max));
+      min-height: calc(100vh - var(--header-height) - 13px);
+      grid-template-columns: minmax(0, 42%) minmax(0, 1fr) 324px;
+      gap: 32px;
+      padding: 50px 0 0;
+      align-items: start;
+    }
+
+    .about-menu .mega-inner>div:first-child {
+      min-height: calc(100vh - var(--header-height) - 63px);
+      padding: 2px 0 0 7px;
+    }
+
+    .about-menu #mega-title {
+      max-width: 380px;
+      margin: 0 0 25px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+
+    .about-menu #mega-tabs {
+      display: block;
+      max-width: 410px;
+      color: #414141;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .about-menu #mega-tabs::before {
+      content: "Conectamos produtores, cooperativas e cerealistas aos mercados internacionais por meio de originação, comercialização, exportação e logística integrada.";
+      display: block;
+      max-width: 405px;
+      margin-bottom: 0;
+    }
+
+    .about-menu #mega-tabs button {
+      display: none;
+    }
+
+    .about-menu .mega-content {
+      display: block;
+      min-height: calc(100vh - var(--header-height) - 63px);
+      margin: 0;
+      padding: 2px 36px 46px 60px;
+      border: 0;
+      background: #f7f7f7;
+    }
+
+    .about-menu .mega-content h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .about-menu .about-menu-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .about-menu .about-menu-line a {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      font-size: 13px;
+    }
+
+    .about-menu .about-menu-rule {
+      height: 1px;
+      margin: 28px 0 25px;
+      background: #cfd3d6;
+    }
+
+    .about-menu .about-menu-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .about-menu .about-menu-subheading {
+      margin-top: 66px;
+    }
+
+    .about-menu .about-menu-subheading+.about-menu-rule {
+      margin-top: 28px;
+      margin-bottom: 25px;
+    }
+
+    .about-menu .mega-featured {
+      display: block;
+      width: 324px;
+      border: 1px solid #ced4da;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .about-menu .mega-featured img {
+      display: block;
+      width: 100%;
+      height: 162px;
+      object-fit: cover;
+    }
+
+    .about-menu .mega-featured-copy {
+      padding: 50px 24px 58px;
+    }
+
+    .about-menu .mega-featured h3 {
+      margin: 0 0 28px;
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -.02em;
+    }
+
+    .about-menu .mega-featured p {
+      margin: 0;
+      color: #303030;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .about-menu .link-arrow {
+      font-size: 22px;
+    }
+
+    @media (max-width: 1120px) {
+      .mega-menu.about-menu .mega-inner {
+        grid-template-columns: minmax(0, 36%) minmax(0, 1fr) 275px;
+        gap: 20px;
+      }
+
+      .about-menu .mega-featured {
+        width: 275px;
+      }
+
+      .about-menu .mega-featured img {
+        height: 137px;
+      }
+
+      .about-menu .mega-content {
+        padding-left: 34px;
+        padding-right: 24px;
+      }
+
+      .about-menu .about-menu-list {
+        font-size: 16px;
+      }
+    }
+
+    .hero {
+      position: relative;
+      height: clamp(620px, calc(100vh - 110px), 760px);
+      min-height: 620px;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .hero-slides,
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-slide {
+      opacity: 0;
+      visibility: hidden;
+      transform: none;
+      transition: none;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      filter: brightness(.82) contrast(1.04);
+      transform: none;
+      transition: none;
+    }
+
+    .hero-transition-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 8;
+      background: #101413;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      will-change: opacity;
+    }
+
+    .hero-video {
+      background: #111;
+    }
+
+    .hero-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .04) 55%, rgba(0, 0, 0, .12));
+      pointer-events: none;
+    }
+
+    .hero-layout {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 40px, var(--page-max));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-card {
+      position: relative;
+      width: 464px;
+      height: calc(100% - 63px);
+      min-height: 550px;
+      display: flex;
+      flex-direction: column;
+      padding: 42px 32px 40px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .hero-card h1,
+    .hero-card h2 {
+      max-width: 350px;
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(38px, 3.1vw, 48px);
+      font-weight: 700;
+      letter-spacing: -.045em;
+      line-height: 1.12;
+    }
+
+    .hero-card h2,
+    .hero-card p,
+    .hero-card .cta {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .75s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .hero-slide.active .hero-card h2,
+    .hero-slide.active .hero-card p,
+    .hero-slide.active .hero-card .cta {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-slide.active .hero-card h2 {
+      transition-delay: .18s;
+    }
+
+    .hero-slide.active .hero-card p {
+      transition-delay: .27s;
+    }
+
+    .hero-slide.active .hero-card .cta {
+      transition-delay: .36s;
+    }
+
+    .hero-card p {
+      max-width: 350px;
+      margin: 38px 0 0;
+      color: var(--white);
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 1.48;
+    }
+
+    .hero-card .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 181px;
+      height: 48px;
+      margin-top: 43px;
+      background: var(--sa-terra);
+      color: var(--white);
+      border: 1px solid var(--sa-terra);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .hero-card .cta:hover {
+      background: var(--sa-terra-dark);
+      color: var(--white);
+      border-color: var(--sa-terra-dark);
+    }
+
+    .hero-card .arrow-button {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .hero-card .arrow-button:hover {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .hero-card .dot {
+      background: #929292;
+    }
+
+    .hero-card .dot.active {
+      background: var(--sa-terra);
+    }
+
+    .hero-card .progress-line {
+      background: var(--sa-terra);
+    }
+
+    .hero-controls {
+      position: absolute;
+      left: 32px;
+      right: 32px;
+      bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .arrow-controls {
+      display: flex;
+      gap: 12px;
+    }
+
+    .arrow-button {
+      width: 54px;
+      height: 54px;
+      padding: 0 0 6px 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid #888;
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 1;
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .arrow-button:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .dots {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-right: 11px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #929292;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: var(--sa-terra);
+    }
+
+    .progress-line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background: var(--sa-terra);
+    }
+
+    .progress-line.running {
+      animation: progress 6.5s linear;
+    }
+
+    @keyframes progress {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    .company-section,
+    .solutions-section {
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .company-section {
+      padding: 66px 0 100px;
+    }
+
+    .content-container {
+      width: min(100% - 40px, var(--page-max));
+      margin: 0 auto;
+    }
+
+    .company-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: 92px;
+      align-items: start;
+    }
+
+    .company-intro h2,
+    .solutions-intro h2 {
+      margin: 0;
+      color: var(--black);
+      font-size: 40px;
+      line-height: 1.27;
+      letter-spacing: -.035em;
+    }
+
+    .company-intro h2 {
+      max-width: 590px;
+    }
+
+    .company-intro p,
+    .solutions-intro p {
+      margin: 0;
+      color: #161616;
+      font-size: 20px;
+      line-height: 1.43;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 101px;
+    }
+
+    .stat-card {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 32px 49px;
+      background: #f7f7f7;
+      color: var(--black);
+    }
+
+    .stat-number {
+      color: var(--sa-teal);
+      font-size: 60px;
+      font-weight: 700;
+      letter-spacing: -.045em;
+      line-height: 1;
+    }
+
+    .stat-label {
+      margin-top: 12px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .stat-link,
+    .solutions-link,
+    .spotlight-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .stat-link {
+      margin-top: auto;
+      color: var(--sa-teal);
+    }
+
+    .link-arrow {
+      display: inline-block;
+      font-size: 23px;
+      font-weight: 300;
+      line-height: .5;
+      transform: translateY(-1px);
+    }
+
+    .solutions-section {
+      padding: 0 0 92px;
+    }
+
+    .solutions-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 92px;
+      row-gap: 29px;
+      align-items: end;
+    }
+
+    .solutions-intro h2 {
+      max-width: 585px;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .solutions-description {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 655px;
+    }
+
+    .solutions-action {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+    }
+
+    .solutions-link {
+      min-width: 201px;
+      min-height: 40px;
+      justify-content: center;
+      background: var(--sa-teal);
+      color: var(--white);
+      border: 1px solid var(--sa-teal);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .solutions-link:hover {
+      background: var(--sa-teal-deep);
+      color: var(--white);
+    }
+
+    .spotlight {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      min-height: 500px;
+      margin-top: 61px;
+      background: var(--black);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .spotlight-copy {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 70px 50px 50px;
+    }
+
+    .spotlight-copy h3 {
+      margin: 0 0 34px;
+      color: var(--white);
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+
+    .spotlight-copy p {
+      max-width: 590px;
+      margin: 0;
+      color: #bcbcbc;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .spotlight-link {
+      margin-top: auto;
+      color: var(--sa-terra);
+      font-size: 16px;
+    }
+
+    .spotlight-image-wrap {
+      position: relative;
+      align-self: stretch;
+      min-height: 500px;
+    }
+
+    .spotlight-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      transition: opacity .18s ease;
+    }
+
+    .solution-tabs {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      margin-top: 48px;
+      border-left: 1px solid #202020;
+    }
+
+    .solution-tab {
+      min-height: 68px;
+      padding: 17px 24px 12px;
+      border: 0;
+      border-right: 1px solid #dedede;
+      background: var(--white);
+      color: #929292;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.42;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .solution-tab.active {
+      color: var(--sa-teal);
+    }
+
+    .solution-tab:hover {
+      color: var(--sa-terra);
+    }
+
+    .projects-section {
+      padding: 62px 0 68px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .projects-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 92px;
+      row-gap: 27px;
+      align-items: end;
+    }
+
+    .projects-intro h2 {
+      grid-column: 1;
+      grid-row: 1;
+      max-width: 700px;
+      margin: 0;
+      color: var(--white);
+      font-size: 40px;
+      line-height: 1.2;
+      letter-spacing: -.035em;
+    }
+
+    .projects-description {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 670px;
+      margin: 0;
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.42;
+    }
+
+    .projects-action {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+    }
+
+    .projects-button {
+      width: 191px;
+      height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      color: var(--black);
+      border: 1px solid var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      transition: background .22s ease, color .22s ease;
+    }
+
+    .projects-button:hover {
+      background: transparent;
+      color: var(--white);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 62px;
+    }
+
+    .project-card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      background: #222;
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, .15);
+    }
+
+    .project-media {
+      position: relative;
+      aspect-ratio: 344 / 267;
+      overflow: hidden;
+      background: #333;
+    }
+
+    .project-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter .35s ease;
+    }
+
+    .project-card:hover .project-media img {
+      filter: brightness(1.05);
+    }
+
+    .project-region {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 10px 16px;
+      background: rgba(0, 0, 0, .94);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .09em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .project-copy {
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      padding: 35px 28px 28px;
+    }
+
+    .project-title {
+      margin: 0;
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.42;
+      letter-spacing: -.025em;
+    }
+
+    .project-title a {
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 5px;
+      transition: text-decoration-color .22s ease;
+    }
+
+    .project-card:hover .project-title a {
+      text-decoration-color: var(--sa-terra);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 16px;
+      border: 1px solid #d0d0d0;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .projects-controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .projects-control {
+      width: 54px;
+      height: 54px;
+      padding: 0 0 6px 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid #888;
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 25px;
+      transition: background .22s ease, border-color .22s ease;
+    }
+
+    .projects-control:hover {
+      background: rgba(255, 255, 255, .1);
+      border-color: var(--white);
+    }
+
+    .areas-section {
+      padding: 76px 0 96px;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .areas-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 92px;
+      row-gap: 28px;
+      align-items: end;
+    }
+
+    .areas-intro h2 {
+      grid-column: 1;
+      grid-row: 1;
+      max-width: 640px;
+      margin: 0;
+      color: var(--black);
+      font-size: 40px;
+      line-height: 1.2;
+      letter-spacing: -.035em;
+    }
+
+    .areas-description {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 700px;
+      margin: 0;
+      color: #161616;
+      font-size: 20px;
+      line-height: 1.43;
+    }
+
+    .areas-action {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+    }
+
+    .areas-button {
+      width: 201px;
+      height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--sa-teal);
+      color: var(--white);
+      border: 1px solid var(--sa-teal);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      transition: background .22s ease, color .22s ease;
+    }
+
+    .areas-button:hover {
+      background: var(--sa-teal-deep);
+      color: var(--white);
+      border-color: var(--sa-teal-deep);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 62px;
+    }
+
+    .area-card {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 18px;
+      background: var(--white);
+      color: var(--black);
+      border-bottom: 1px solid #d9dfdd;
+    }
+
+    .area-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0;
+      height: 2px;
+      background: var(--sa-terra);
+      transition: width .42s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .area-card:hover::after,
+    .area-card:focus-within::after {
+      width: 100%;
+    }
+
+    .area-media {
+      position: relative;
+      aspect-ratio: 347 / 269;
+      overflow: hidden;
+      background: #f7f7f7;
+    }
+
+    .area-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .65s cubic-bezier(.22, .61, .36, 1), filter .4s ease;
+    }
+
+    .area-card:hover .area-media img,
+    .area-card:focus-within .area-media img {
+      transform: scale(1.035);
+      filter: saturate(1.04) contrast(1.02);
+    }
+
+    .area-tag {
+      align-self: flex-start;
+      margin-top: 24px;
+      padding: 10px 16px;
+      border: 1px solid #b9cbc6;
+      color: var(--sa-teal);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      transition: color .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .area-card:hover .area-tag,
+    .area-card:focus-within .area-tag {
+      color: var(--sa-terra);
+      border-color: rgba(212, 87, 59, .55);
+      background: rgba(212, 87, 59, .045);
+    }
+
+    .area-title {
+      min-height: 66px;
+      margin: 23px 0 0;
+      color: var(--black);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.42;
+      letter-spacing: -.025em;
+      transition: color .25s ease;
+    }
+
+    .area-card:hover .area-title,
+    .area-card:focus-within .area-title {
+      color: var(--sa-teal-deep);
+    }
+
+    .area-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      margin-top: 24px;
+      color: #3b3b3b;
+      font-size: 14px;
+      transition: color .22s ease;
+    }
+
+    .area-link .link-arrow {
+      transition: transform .3s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .area-card:hover .area-link,
+    .area-card:focus-within .area-link {
+      color: var(--sa-terra);
+    }
+
+    .area-card:hover .area-link .link-arrow,
+    .area-card:focus-within .area-link .link-arrow {
+      transform: translate(4px, -1px);
+    }
+
+    .resources-section {
+      padding: 86px 0 100px;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .resources-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: 72px;
+      align-items: end;
+    }
+
+    .resources-heading {
+      max-width: 620px;
+      margin: 0;
+      color: var(--black);
+      font-size: 40px;
+      line-height: 1.2;
+      letter-spacing: -.035em;
+    }
+
+    .resources-kicker,
+    .resource-meta,
+    .resource-feature-label {
+      display: block;
+      color: var(--sa-terra);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .resource-meta,
+    .resource-feature-label {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .resources-kicker {
+      margin-bottom: 14px;
+    }
+
+    .resources-description {
+      max-width: 670px;
+      margin: 18px 0 0;
+      color: #161616;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .resources-all-link {
+      min-width: 168px;
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 21px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: background .22s ease;
+    }
+
+    .resources-all-link:hover {
+      background: var(--sa-terra);
+    }
+
+    .resources-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+      gap: 76px;
+      margin-top: 58px;
+    }
+
+    .resource-feature {
+      display: block;
+      color: var(--black);
+    }
+
+    .resource-feature-media {
+      width: 100%;
+      aspect-ratio: 1.35 / 1;
+      overflow: hidden;
+      background: #e8e8e8;
+    }
+
+    .resource-feature-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .resource-feature-copy {
+      padding-top: 24px;
+    }
+
+    .resource-feature-label {
+      color: var(--sa-terra);
+    }
+
+    .resource-feature h3 {
+      max-width: 520px;
+      margin: 0;
+      color: var(--black);
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: -.035em;
+    }
+
+    .resource-feature p {
+      max-width: 520px;
+      margin: 18px 0 0;
+      color: #585858;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .resource-feature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 28px;
+      color: var(--sa-teal);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .resource-feature-link span,
+    .resource-arrow {
+      transition: transform .22s ease;
+    }
+
+    .resource-feature-link:hover span {
+      transform: translateX(5px);
+    }
+
+    .resources-list {
+      border-top: 1px solid #d7d7d7;
+    }
+
+    .resource-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: 25px 0;
+      border-bottom: 1px solid #d7d7d7;
+      color: var(--black);
+    }
+
+    .resource-row h3 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.28;
+      letter-spacing: -.02em;
+      transition: color .22s ease;
+    }
+
+    .resource-row p {
+      margin: 8px 0 0;
+      color: #585858;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .resource-arrow {
+      color: var(--sa-terra);
+      font-size: 25px;
+    }
+
+    .resource-row:hover h3 {
+      color: var(--sa-terra);
+    }
+
+    .resource-row:hover .resource-arrow {
+      transform: translateX(5px);
+    }
+
+    .site-footer {
+      padding: 32px 0 24px;
+      background: #0c1110;
+      color: var(--white);
+    }
+
+    .footer-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 54px;
+      margin-bottom: 68px;
+      padding: 38px 42px;
+      background: var(--sa-teal-deep);
+    }
+
+    .footer-eyebrow {
+      display: block;
+      margin-bottom: 12px;
+      color: #9cc5bc;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .footer-cta h2 {
+      max-width: 740px;
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(28px, 2.7vw, 38px);
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+
+    .footer-cta p {
+      max-width: 720px;
+      margin: 15px 0 0;
+      color: #d0dfdc;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .footer-cta-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-cta-primary,
+    .footer-cta-secondary {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 22px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: background .22s ease, color .22s ease;
+    }
+
+    .footer-cta-primary {
+      background: var(--sa-terra);
+      color: var(--white);
+    }
+
+    .footer-cta-primary:hover {
+      background: var(--sa-terra-dark);
+    }
+
+    .footer-cta-secondary {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .footer-cta-secondary:hover {
+      background: #e9eceb;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: minmax(260px, 1.45fr) .75fr 1fr 1.1fr 1.15fr;
+      gap: 38px;
+      padding-bottom: 50px;
+    }
+
+    .footer-brand {
+      max-width: 330px;
+    }
+
+    .footer-logo {
+      display: block;
+      width: 215px;
+      height: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-tagline {
+      max-width: 330px;
+      margin: 24px 0 0;
+      color: #c8cfcd;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-brand-note {
+      margin: 20px 0 0;
+      color: #89938f;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .footer-column-title {
+      margin: 4px 0 20px;
+      color: #c9715e;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 11px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links a {
+      color: #e5e9e7;
+      font-size: 14px;
+      line-height: 1.4;
+      transition: color .22s ease;
+    }
+
+    .footer-links li {
+      color: #b8c0bd;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .footer-links a:hover {
+      color: var(--sa-terra);
+    }
+
+    .footer-middle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 20px 24px;
+      background: #151b19;
+    }
+
+    .footer-contact-links,
+    .footer-social {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-contact-links a {
+      color: #e4e8e6;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .22s ease;
+    }
+
+    .footer-contact-links a:hover {
+      color: var(--sa-terra);
+    }
+
+    .footer-social-label {
+      color: #9faaa6;
+      font-size: 12px;
+    }
+
+    .footer-social a {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      background: #202826;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      transition: background .22s ease, color .22s ease, transform .22s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--sa-terra);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 24px 2px 0;
+    }
+
+    .footer-copyright,
+    .footer-legal a {
+      color: #8f9995;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+
+    .footer-legal a:hover {
+      color: var(--sa-terra);
+    }
+
+    .scroll-reveal {
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal.motion-hidden {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .8s ease, transform .9s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .below-fold {
+      height: 0;
+      background: var(--white);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+
+      .scroll-reveal.motion-hidden {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1120px) {
+
+      .header-inner,
+      .hero-layout {
+        width: min(100% - 32px, var(--page-max));
+      }
+
+      .main-nav {
+        margin-left: 26px;
+      }
+
+      .nav-list {
+        gap: 22px;
+      }
+
+      .utility-list {
+        gap: 18px;
+      }
+
+      .nav-link,
+      .utility-link {
+        font-size: 14px;
+      }
+
+      .hero-card {
+        width: 42%;
+      }
+
+      .company-intro,
+      .solutions-intro {
+        column-gap: 42px;
+      }
+
+      .company-intro h2,
+      .solutions-intro h2 {
+        font-size: 35px;
+      }
+
+      .stat-number {
+        font-size: 49px;
+      }
+
+      .stat-card {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .spotlight-copy {
+        padding-left: 32px;
+        padding-right: 40px;
+      }
+
+      .solution-tab {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .projects-intro {
+        column-gap: 42px;
+      }
+
+      .projects-intro h2 {
+        font-size: 35px;
+      }
+
+      .projects-description {
+        font-size: 18px;
+      }
+
+      .project-copy {
+        padding-left: 23px;
+        padding-right: 23px;
+      }
+
+      .project-title {
+        font-size: 18px;
+      }
+
+      .project-tag {
+        padding-left: 11px;
+        padding-right: 11px;
+        font-size: 10px;
+      }
+
+      .areas-intro {
+        column-gap: 42px;
+      }
+
+      .areas-intro h2 {
+        font-size: 35px;
+      }
+
+      .areas-description {
+        font-size: 18px;
+      }
+
+      .areas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .area-title {
+        font-size: 18px;
+      }
+
+      .resources-intro {
+        column-gap: 40px;
+      }
+
+      .resources-heading {
+        font-size: 35px;
+      }
+
+      .resources-layout {
+        gap: 40px;
+      }
+
+      .footer-top {
+        grid-template-columns: minmax(250px, 1.25fr) repeat(2, minmax(160px, 1fr));
+        gap: 42px 30px;
+      }
+
+      .footer-brand {
+        grid-row: span 2;
+      }
+
+      .footer-tagline {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      :root {
+        --header-height: 64px;
+      }
+
+      .site-header {
+        height: var(--header-height);
+        background: var(--white);
+        border-bottom: 1px solid rgba(0, 0, 0, .12);
+        box-shadow: 0 2px 10px rgba(16, 20, 19, .045);
+      }
+
+      .header-inner {
+        width: 100%;
+        background: var(--white);
+      }
+
+      .brand {
+        flex-basis: 132px;
+        background: var(--black);
+        color: var(--white);
+      }
+
+      .brand img {
+        width: 110px;
+        filter: brightness(0) invert(1);
+      }
+
+      .main-nav,
+      .utility-area {
+        display: none;
+      }
+
+      .mobile-tools {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        margin-left: auto;
+        padding-right: 20px;
+      }
+
+      .mobile-menu-button {
+        border: 0;
+        padding: 8px 0;
+        background: transparent;
+        color: var(--black);
+        cursor: pointer;
+      }
+
+      .hamburger,
+      .hamburger::before,
+      .hamburger::after {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      .hamburger {
+        position: relative;
+      }
+
+      .hamburger::before,
+      .hamburger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: transform .25s ease, top .25s ease, background .25s ease;
+      }
+
+      .hamburger::before {
+        top: -7px;
+      }
+
+      .hamburger::after {
+        top: 7px;
+      }
+
+      .mobile-menu-button[aria-expanded="true"] .hamburger {
+        background: transparent;
+      }
+
+      .mobile-menu-button[aria-expanded="true"] .hamburger::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      .mobile-menu-button[aria-expanded="true"] .hamburger::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      body.mobile-menu-open {
+        overflow: hidden;
+      }
+
+      .mega-menu.mobile-menu {
+        min-height: calc(100svh - var(--header-height));
+        max-height: calc(100svh - var(--header-height));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+
+      .mega-menu.mobile-menu .mega-inner {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        padding: 25px 20px 34px;
+      }
+
+      .mega-menu.mobile-menu #mega-title {
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+
+      .mega-menu.mobile-menu .mega-tabs {
+        display: none;
+      }
+
+      .mega-menu.mobile-menu .mega-content {
+        display: block;
+        min-height: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+      }
+
+      .mega-menu.mobile-menu .mega-featured {
+        display: none;
+      }
+
+      .mobile-nav-panel {
+        display: grid;
+        border-top: 1px solid #d8d8d8;
+      }
+
+      .mobile-nav-panel a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 58px;
+        border-bottom: 1px solid #d8d8d8;
+        color: var(--black);
+        font-family: var(--display-font);
+        font-size: 19px;
+        font-weight: 600;
+      }
+
+      .mobile-nav-panel a::after {
+        content: "→";
+        font-family: var(--body-font);
+        font-size: 22px;
+        font-weight: 400;
+        transition: transform .22s ease;
+      }
+
+      .mobile-nav-panel a:hover::after,
+      .mobile-nav-panel a:focus-visible::after {
+        transform: translateX(5px);
+      }
+
+      .mobile-nav-panel .mobile-nav-group {
+        display: grid;
+        gap: 0;
+        margin-top: 24px;
+      }
+
+      .mobile-nav-panel .mobile-nav-label {
+        padding: 0 0 11px;
+        color: #777;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .mobile-nav-panel .mobile-nav-group a {
+        min-height: 50px;
+        font-family: var(--body-font);
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .hero {
+        height: calc(100svh - var(--header-height));
+        min-height: 650px;
+        background: var(--black);
+      }
+
+      .hero-slide {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: clamp(250px, 44vw, 360px) 1fr;
+        background: var(--black);
+      }
+
+      .hero-slide::after {
+        bottom: auto;
+        height: clamp(250px, 44vw, 360px);
+        background: linear-gradient(180deg, rgba(0, 0, 0, .02), rgba(0, 0, 0, .14));
+      }
+
+      .hero-image {
+        position: relative;
+        inset: auto;
+        grid-column: 1;
+        grid-row: 1;
+        height: 100%;
+        object-position: center;
+      }
+
+      .hero-layout {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: block;
+        background: var(--black);
+      }
+
+      .hero-card {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 30px 26px 96px;
+      }
+
+      .hero-card h1,
+      .hero-card h2 {
+        max-width: 650px;
+        font-size: 32px;
+        line-height: 1.14;
+      }
+
+      .hero-card p {
+        max-width: 660px;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .hero-card .cta {
+        width: 100%;
+        height: 49px;
+        margin-top: 24px;
+        background: var(--white);
+        color: var(--black);
+        border-color: var(--white);
+      }
+
+      .hero-card .cta:hover {
+        background: var(--white);
+        color: var(--black);
+        border-color: var(--white);
+      }
+
+      .hero-card .arrow-button,
+      .hero-card .arrow-button:hover {
+        background: transparent;
+        color: var(--white);
+        border-color: #777;
+      }
+
+      .hero-card .arrow-button:hover {
+        border-color: var(--white);
+      }
+
+      .hero-controls {
+        left: 26px;
+        right: 26px;
+        bottom: 24px;
+      }
+
+      .hero-card .progress-line {
+        display: none;
+      }
+
+      .company-section {
+        padding: 54px 0 70px;
+      }
+
+      .content-container {
+        width: min(100% - 32px, var(--page-max));
+      }
+
+      .company-intro,
+      .solutions-intro {
+        display: block;
+      }
+
+      .company-intro p {
+        margin-top: 28px;
+      }
+
+      .stats-grid {
+        margin-top: 54px;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .stat-card {
+        min-height: 226px;
+        padding: 32px 24px;
+      }
+
+      .stat-number {
+        font-size: 49px;
+      }
+
+      .solutions-section {
+        padding-bottom: 60px;
+      }
+
+      .solutions-intro p {
+        margin-top: 28px;
+      }
+
+      .solutions-action {
+        margin-top: 25px;
+        justify-content: flex-start;
+      }
+
+      .spotlight {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        margin-top: 42px;
+      }
+
+      .spotlight-copy {
+        min-height: 350px;
+        padding: 36px 26px;
+      }
+
+      .spotlight-image-wrap,
+      .spotlight-image {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      .solution-tabs {
+        display: flex;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline proximity;
+        scrollbar-width: none;
+        touch-action: pan-x;
+        margin-top: 24px;
+      }
+
+      .solution-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .solution-tab {
+        flex: 0 0 clamp(170px, 42vw, 210px);
+        min-height: 72px;
+        border-bottom: 0;
+        scroll-snap-align: start;
+      }
+
+      .projects-section {
+        padding: 50px 0 54px;
+      }
+
+      .projects-intro {
+        display: block;
+      }
+
+      .projects-intro h2 {
+        font-size: 34px;
+      }
+
+      .projects-description {
+        margin-top: 25px;
+        font-size: 17px;
+      }
+
+      .projects-action {
+        margin-top: 28px;
+        justify-content: flex-start;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 42px;
+      }
+
+      .project-copy {
+        min-height: 190px;
+      }
+
+      .projects-controls {
+        justify-content: flex-start;
+      }
+
+      .areas-section {
+        padding: 54px 0 70px;
+      }
+
+      .areas-intro {
+        display: block;
+      }
+
+      .areas-intro h2 {
+        font-size: 34px;
+      }
+
+      .areas-description {
+        margin-top: 25px;
+        font-size: 17px;
+      }
+
+      .areas-action {
+        margin-top: 28px;
+        justify-content: flex-start;
+      }
+
+      .areas-grid {
+        margin-top: 42px;
+      }
+
+      .resources-section {
+        padding: 54px 0 70px;
+      }
+
+      .resources-intro {
+        display: block;
+      }
+
+      .resources-heading {
+        font-size: 34px;
+      }
+
+      .resources-description {
+        font-size: 17px;
+      }
+
+      .resources-all-link {
+        margin-top: 25px;
+      }
+
+      .resources-layout {
+        grid-template-columns: 1fr;
+        margin-top: 42px;
+      }
+
+      .resource-feature-media {
+        aspect-ratio: 1.5 / 1;
+      }
+
+      .site-footer {
+        padding: 54px 0 22px;
+      }
+
+      .footer-cta {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 52px;
+        padding: 32px;
+      }
+
+      .footer-cta-actions {
+        width: 100%;
+      }
+
+      .footer-cta-primary,
+      .footer-cta-secondary {
+        flex: 1;
+      }
+
+      .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px 26px;
+        padding-bottom: 42px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+        grid-row: auto;
+      }
+
+      .footer-middle,
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-middle {
+        gap: 22px;
+      }
+
+      .footer-bottom {
+        gap: 16px;
+      }
+
+      .footer-legal {
+        justify-content: flex-start;
+        gap: 14px 20px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .brand {
+        flex-basis: 108px;
+      }
+
+      .brand img {
+        width: 90px;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero-slide {
+        grid-template-rows: clamp(230px, 58vw, 280px) 1fr;
+      }
+
+      .hero-slide::after {
+        height: clamp(230px, 58vw, 280px);
+      }
+
+      .hero-card {
+        width: 100%;
+        min-height: 0;
+        height: 100%;
+        margin: 0;
+        padding: 26px 18px 88px;
+      }
+
+      .hero-card h1,
+      .hero-card h2 {
+        max-width: none;
+        font-size: 30px;
+      }
+
+      .hero-card p {
+        max-width: none;
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .hero-card .cta {
+        width: 100%;
+        margin-top: 22px;
+      }
+
+      .hero-controls {
+        left: 18px;
+        right: 18px;
+        bottom: 22px;
+      }
+
+      .arrow-button {
+        width: 44px;
+        height: 44px;
+      }
+
+      .dots {
+        gap: 12px;
+        padding-right: 5px;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+      }
+
+      .company-intro h2,
+      .solutions-intro h2 {
+        font-size: 34px;
+      }
+
+      .company-intro p,
+      .solutions-intro p {
+        font-size: 17px;
+      }
+
+      .stat-label {
+        font-size: 17px;
+      }
+
+      .areas-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .area-title {
+        min-height: 0;
+      }
+
+      .resource-feature-media {
+        aspect-ratio: 16 / 10;
+      }
+
+      .resource-feature-copy {
+        padding-top: 22px;
+      }
+
+      .resource-feature h3 {
+        font-size: 28px;
+      }
+
+      .resource-row h3 {
+        font-size: 19px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 31px;
+      }
+
+      .footer-cta {
+        padding: 28px 22px;
+      }
+
+      .footer-cta-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .footer-cta-primary,
+      .footer-cta-secondary {
+        width: 100%;
+      }
+
+      .footer-middle {
+        padding: 22px;
+      }
+
+      .footer-social-label {
+        width: 100%;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-logo {
+        width: 190px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .brand {
+        flex-basis: 100px;
+      }
+
+      .brand img {
+        width: 84px;
+      }
+
+      .mobile-tools {
+        gap: 13px;
+        padding-right: 14px;
+      }
+
+      .hero-card {
+        width: 100%;
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero-card h1,
+      .hero-card h2 {
+        font-size: 28px;
+      }
+
+      .hero-controls {
+        left: 16px;
+        right: 16px;
+      }
+
+      .content-container {
+        width: min(100% - 24px, var(--page-max));
+      }
+    }
+
+    @media (max-width: 820px) and (orientation: landscape) and (max-height: 640px) {
+      .hero {
+        height: 650px;
+        min-height: 650px;
+      }
+
+      .hero-slide {
+        grid-template-rows: 270px 380px;
+      }
+
+      .hero-slide::after {
+        height: 270px;
+      }
+
+      .hero-card {
+        height: 100%;
+        min-height: 0;
+        padding-top: 24px;
+      }
+
+      .hero-card h1,
+      .hero-card h2 {
+        font-size: 33px;
+      }
+
+      .hero-card p {
+        margin-top: 18px;
+        font-size: 15px;
+      }
+
+      .hero-card .cta {
+        margin-top: 20px;
+      }
+
+      .hero-controls {
+        bottom: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="South Agri — início">
+        <img src="logo.png" alt="South Agri" onerror="this.style.display='none'; this.nextElementSibling.hidden=false">
+        <span class="brand-fallback" hidden>South Agri</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#home">Início</a></li>
+          <li><a class="nav-link" href="#company">Empresa</a></li>
+          <li><button class="nav-link has-menu" data-menu="about" aria-expanded="false">Atuação</button></li>
+          <li><button class="nav-link has-menu" data-menu="services" aria-expanded="false">Serviços</button>
+          </li>
+          <li><a class="nav-link" href="#projects">Produtos</a></li>
+        </ul>
+      </nav>
+
+      <div class="utility-area">
+        <ul class="utility-list">
+          <li><a class="utility-link" href="#solutions">Afretamento</a></li>
+          <li><a class="utility-link" href="links.html">Links úteis</a></li>
+          <li><a class="utility-link" href="#contact">Contato</a></li>
+          <li class="language-selector" data-language-selector>
+            <button class="language-toggle" type="button" aria-label="Selecionar idioma. Atual: Português do Brasil"
+              aria-haspopup="menu" aria-expanded="false">
+              <img src="flag-br.svg" alt="" width="30" height="20">
+            </button>
+            <div class="language-menu" role="menu" hidden>
+              <span class="language-option" role="menuitem" aria-label="English, Estados Unidos">
+                <img src="flag-us.svg" alt="" width="30" height="20">
+                <span>English</span>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-tools">
+        <div class="language-selector" data-language-selector>
+          <button class="language-toggle" type="button" aria-label="Selecionar idioma. Atual: Português do Brasil"
+            aria-haspopup="menu" aria-expanded="false">
+            <img src="flag-br.svg" alt="" width="30" height="20">
+          </button>
+          <div class="language-menu" role="menu" hidden>
+            <span class="language-option" role="menuitem" aria-label="English, Estados Unidos">
+              <img src="flag-us.svg" alt="" width="30" height="20">
+              <span>English</span>
+            </span>
+          </div>
+        </div>
+        <button class="mobile-menu-button" id="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span
+            class="hamburger"></span></button>
+      </div>
+    </div>
+
+    <div class="mega-menu" id="mega-menu" aria-hidden="true">
+      <div class="mega-inner">
+        <div>
+          <h2 id="mega-title">Sobre nós</h2>
+          <div class="mega-tabs" id="mega-tabs"></div>
+        </div>
+        <div class="mega-content" id="mega-content"></div>
+        <aside class="mega-featured" id="mega-featured"></aside>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <h1 class="sr-only">South Agri</h1>
+    <section class="hero" aria-label="Destaques da South Agri">
+      <div class="hero-slides" id="hero-slides">
+        <article class="hero-slide active" data-index="0">
+          <video class="hero-image hero-video" muted autoplay loop playsinline preload="metadata"
+            aria-label="Vídeo institucional da South Agri">
+            <source src="Video-institucional-homepage-1080p-web.mp4" type="video/mp4">
+          </video>
+          <div class="hero-layout">
+            <div class="hero-card">
+              <h2>O agronegócio brasileiro conectado ao mundo</h2>
+              <p>Originamos, comercializamos e distribuímos commodities agrícolas com soluções práticas para produtores, fornecedores e compradores internacionais.</p>
+              <a class="cta" href="#company">Conheça a South Agri</a>
+              <div class="hero-controls">
+                <div class="arrow-controls">
+                  <button class="arrow-button" type="button" data-prev aria-label="Slide anterior">←</button>
+                  <button class="arrow-button" type="button" data-next aria-label="Próximo slide">→</button>
+                </div>
+                <div class="dots" aria-label="Escolher destaque">
+                  <button class="dot active" type="button" data-slide="0" aria-label="Ir para o destaque 1"
+                    aria-current="true"></button>
+                  <button class="dot" type="button" data-slide="1" aria-label="Ir para o destaque 2"></button>
+                </div>
+              </div>
+              <span class="progress-line running" aria-hidden="true"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide" data-index="1">
+          <video class="hero-image hero-video" muted loop playsinline preload="auto"
+            aria-label="Vídeo de operações e logística da South Agri">
+            <source src="Video-institucional-homepage-2.mp4" type="video/mp4">
+          </video>
+          <div class="hero-layout">
+            <div class="hero-card">
+              <h2>Seu fornecedor confiável no Brasil</h2>
+              <p>Da carga conteinerizada aos embarques Panamax, integramos exportação, frete marítimo, gestão de risco e logística internacional.</p>
+              <a class="cta" href="#solutions">Conheça os serviços</a>
+              <div class="hero-controls">
+                <div class="arrow-controls">
+                  <button class="arrow-button" type="button" data-prev aria-label="Slide anterior">←</button>
+                  <button class="arrow-button" type="button" data-next aria-label="Próximo slide">→</button>
+                </div>
+                <div class="dots" aria-label="Escolher destaque">
+                  <button class="dot" type="button" data-slide="0" aria-label="Ir para o destaque 1"></button>
+                  <button class="dot" type="button" data-slide="1" aria-label="Ir para o destaque 2"></button>
+                </div>
+              </div>
+              <span class="progress-line" aria-hidden="true"></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="hero-transition-overlay" id="hero-transition-overlay" aria-hidden="true"></div>
+    </section>
+
+    <section class="company-section" id="company">
+      <div class="content-container">
+        <div class="company-intro">
+          <h2>Um elo estratégico na cadeia global de suprimentos.</h2>
+          <p>A South Agri aproxima a produção brasileira da demanda internacional. Nossa atuação reúne originação, comercialização, transporte, gestão logística e distribuição para levar produtos agrícolas aos mercados que precisam deles.</p>
+        </div>
+
+        <div class="stats-grid" aria-label="Experiência e alcance da South Agri">
+          <article class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Anos de experiência em comércio exterior e logística</div>
+            <a class="stat-link" href="#company">Conheça a empresa <span class="link-arrow">→</span></a>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number">30</div>
+            <div class="stat-label">Países e regiões atendidos por operações globais</div>
+            <a class="stat-link" href="#areas">Nossa atuação <span class="link-arrow">→</span></a>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Portos brasileiros conectados às nossas operações</div>
+            <a class="stat-link" href="#solutions">Conheça a logística <span class="link-arrow">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="solutions-section" id="solutions">
+      <div class="content-container">
+        <div class="solutions-intro">
+          <h2>Soluções para movimentar negócios além das fronteiras</h2>
+          <p class="solutions-description">Coordenamos cada etapa entre a origem e o destino, com visão comercial, conhecimento logístico e atendimento às exigências do comércio internacional.</p>
+          <div class="solutions-action"><a class="solutions-link" href="#solutions">Ver serviços</a></div>
+        </div>
+
+        <div class="spotlight" id="spotlight">
+          <div class="spotlight-copy">
+            <h3 id="spotlight-title">Originação e comercialização</h3>
+            <p id="spotlight-description">Trabalhamos junto a produtores, cooperativas e cerealistas para desenvolver mercados, ampliar a liquidez e conectar a oferta brasileira a compradores no exterior.</p>
+            <a class="spotlight-link" id="spotlight-link" href="#solutions">Conheça o serviço <span
+                class="link-arrow">→</span></a>
+          </div>
+          <div class="spotlight-image-wrap">
+            <img class="spotlight-image" id="spotlight-image"
+              src="img_serv.jpg"
+              alt="Embarque de sacas em operação portuária">
+          </div>
+        </div>
+
+        <div class="solution-tabs" role="tablist" aria-label="Serviços da South Agri">
+          <button class="solution-tab active" type="button" role="tab" aria-selected="true"
+            data-solution="0">Originação e<br>Comercialização</button>
+          <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="1">Exportação<br>Agrícola</button>
+          <button class="solution-tab" type="button" role="tab" aria-selected="false"
+            data-solution="2">Frete<br>Marítimo</button>
+          <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="3">Afretamento<br>de Navios</button>
+          <button class="solution-tab" type="button" role="tab" aria-selected="false"
+            data-solution="4">Gestão de<br>Risco</button>
+          <button class="solution-tab" type="button" role="tab" aria-selected="false" data-solution="5">Sistemas
+            Logísticos<br>Integrados</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="content-container">
+        <div class="projects-intro">
+          <h2>Produtos para o mercado internacional</h2>
+          <p class="projects-description">Um portfólio diversificado de commodities agrícolas brasileiras, comercializadas de acordo com padrões e modalidades internacionais.</p>
+          <div class="projects-action"><a class="projects-button" href="#contact">Solicitar cotação</a></div>
+        </div>
+
+        <div class="projects-grid" aria-label="Produtos comercializados pela South Agri">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="img_serv_2.jpg"
+                alt="Movimentação de cargas agrícolas em terminal portuário">
+              <span class="project-region">Origem Brasil</span>
+            </div>
+            <div class="project-copy">
+              <h3 class="project-title"><a href="#contact">Grãos e oleaginosas</a></h3>
+              <div class="project-tags">
+                <span class="project-tag">Soja</span>
+                <span class="project-tag">Milho amarelo</span>
+                <span class="project-tag">Trigo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="https://approjetos.com.br/wp-content/uploads/2023/07/Portos-e-Terminais.jpg"
+                alt="Imagem provisória para derivados e culturas especiais">
+              <span class="project-region">Mercado internacional</span>
+            </div>
+            <div class="project-copy">
+              <h3 class="project-title"><a href="#contact">Derivados e culturas especiais</a></h3>
+              <div class="project-tags">
+                <span class="project-tag">Farelo de soja</span>
+                <span class="project-tag">Caroço de algodão</span>
+                <span class="project-tag">Pipoca</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="https://approjetos.com.br/wp-content/uploads/2023/07/Energias.jpg"
+                alt="Imagem provisória para açúcar, café e gado vivo">
+              <span class="project-region">Exportação</span>
+            </div>
+            <div class="project-copy">
+              <h3 class="project-title"><a href="#contact">Açúcar, café e proteína animal</a></h3>
+              <div class="project-tags">
+                <span class="project-tag">Açúcar IC 45</span>
+                <span class="project-tag">VHP 600–1200</span>
+                <span class="project-tag">Gado vivo</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-controls" aria-label="Controles do portfólio de produtos">
+          <button class="projects-control" type="button" aria-label="Produtos anteriores">←</button>
+          <button class="projects-control" type="button" aria-label="Próximos produtos">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas-section" id="areas">
+      <div class="content-container">
+        <div class="areas-intro">
+          <h2>Como atuamos</h2>
+          <p class="areas-description">A South Agri está presente nas duas pontas da cadeia: amplia o acesso dos fornecedores brasileiros ao exterior e entrega aos compradores produtos competitivos nas modalidades FOB e CFR.</p>
+          <div class="areas-action"><a class="areas-button" href="#contact">Falar com a equipe</a></div>
+        </div>
+
+        <div class="areas-grid" aria-label="Áreas de atuação da South Agri">
+          <article class="area-card">
+            <div class="area-media">
+              <img src="https://approjetos.com.br/wp-content/uploads/2023/07/Oleo-e-Gas.jpg"
+                alt="Imagem provisória para originação agrícola">
+            </div>
+            <span class="area-tag">Originação</span>
+            <h3 class="area-title">Parcerias com produtores, cooperativas e cerealistas nas principais regiões produtoras</h3>
+            <a class="area-link" href="#solutions">Entenda a atuação <span class="link-arrow">→</span></a>
+          </article>
+
+          <article class="area-card">
+            <div class="area-media">
+              <img src="https://approjetos.com.br/wp-content/uploads/2023/07/Petroquimicas.jpg"
+                alt="Imagem provisória para comércio internacional">
+            </div>
+            <span class="area-tag">Comercialização</span>
+            <h3 class="area-title">Desenvolvimento de mercados e negociação de commodities dentro dos padrões internacionais</h3>
+            <a class="area-link" href="#solutions">Entenda a atuação <span class="link-arrow">→</span></a>
+          </article>
+
+          <article class="area-card">
+            <div class="area-media">
+              <img src="https://approjetos.com.br/wp-content/uploads/2023/07/Energias.jpg"
+                alt="Imagem provisória para logística portuária">
+            </div>
+            <span class="area-tag">Logística internacional</span>
+            <h3 class="area-title">Coordenação de transporte, armazenagem, terminais e embarques nos principais portos brasileiros</h3>
+            <a class="area-link" href="#solutions">Entenda a atuação <span class="link-arrow">→</span></a>
+          </article>
+
+          <article class="area-card">
+            <div class="area-media">
+              <img src="https://approjetos.com.br/wp-content/uploads/2023/07/Infra.jpg" alt="Imagem provisória para distribuição global">
+            </div>
+            <span class="area-tag">Distribuição</span>
+            <h3 class="area-title">Conexão eficiente entre a produção brasileira e importadores em diferentes mercados</h3>
+            <a class="area-link" href="#solutions">Entenda a atuação <span class="link-arrow">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-section" id="resources">
+      <div class="content-container">
+        <div class="resources-intro">
+          <div>
+            <h2 class="resources-heading">Acessos úteis ao comércio exterior</h2>
+            <p class="resources-description">Consulte programações portuárias, órgãos reguladores e referências de mercado reunidas pela South Agri.</p>
+          </div>
+          <a class="resources-all-link" href="links.html">Ver todos os links</a>
+        </div>
+
+        <div class="resources-layout">
+          <article class="resource-feature">
+            <div class="resource-feature-media">
+              <img src="a.webp" alt="Operação aeroportuária conectando mercados internacionais">
+            </div>
+            <div class="resource-feature-copy">
+              <h3>Links estratégicos para operações nacionais e internacionais</h3>
+              <p>Uma página dedicada aos portos, instituições, entidades e fontes de mercado que apoiam decisões no dia a dia.</p>
+              <a class="resource-feature-link" href="links.html">Acessar a central <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <div class="resources-list" aria-label="Categorias de links úteis">
+            <a class="resource-row" href="links.html#portos">
+              <span>
+                <h3>Programação de navios e terminais</h3>
+                <p>Acessos aos line-ups dos principais portos brasileiros.</p>
+              </span>
+              <span class="resource-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="resource-row" href="links.html#regulacao">
+              <span>
+                <h3>Regulação e comércio exterior</h3>
+                <p>Ministérios, Anvisa, Receita Federal e Banco Central.</p>
+              </span>
+              <span class="resource-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="resource-row" href="links.html#mercado">
+              <span>
+                <h3>Commodities, preços e contratos</h3>
+                <p>B3, CME Group, GAFTA, ANEC e inteligência agrícola.</p>
+              </span>
+              <span class="resource-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="resource-row" href="links.html#internacional">
+              <span>
+                <h3>Portos e comércio nos Estados Unidos</h3>
+                <p>Entidades ligadas à logística e às operações aduaneiras.</p>
+              </span>
+              <span class="resource-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="below-fold" aria-hidden="true"></div>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="content-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img class="footer-logo" src="logo.png" alt="South Agri">
+          <p class="footer-tagline">Seu fornecedor confiável no Brasil para soluções inteligentes, práticas e rentáveis no comércio de commodities.</p>
+          <p class="footer-brand-note">CNPJ 19.325.465/0001-40<br>Your Trustworthy Supplier in Brazil</p>
+        </div>
+
+        <div class="footer-column">
+          <h2 class="footer-column-title">Navegação</h2>
+          <ul class="footer-links">
+            <li><a href="#company">Empresa</a></li>
+            <li><a href="#areas">Atuação</a></li>
+            <li><a href="#solutions">Serviços</a></li>
+            <li><a href="#projects">Produtos</a></li>
+            <li><a href="links.html">Links úteis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2 class="footer-column-title">Soluções</h2>
+          <ul class="footer-links">
+            <li><a href="#solutions">Originação e comercialização</a></li>
+            <li><a href="#solutions">Exportação agrícola</a></li>
+            <li><a href="#solutions">Frete marítimo</a></li>
+            <li><a href="#solutions">Afretamento de navios</a></li>
+            <li><a href="#solutions">Gestão de risco</a></li>
+            <li><a href="#solutions">Logística integrada</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2 class="footer-column-title">Brasil</h2>
+          <ul class="footer-links">
+            <li>Edifício Auri Plaza Garten</li>
+            <li>Av. Rolf Wiest, 277 · 6º andar · sala 616</li>
+            <li>Bom Retiro · Joinville/SC</li>
+            <li>CEP 89223-005</li>
+            <li><a href="mailto:contato@southagri.com">contato@southagri.com</a></li>
+            <li><a href="tel:+554732041039">+55 (47) 3204-1039</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5547999221749" target="_blank" rel="noopener noreferrer">WhatsApp: +55 (47) 9 9922-1749</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2 class="footer-column-title">Estados Unidos</h2>
+          <ul class="footer-links">
+            <li>Southwest Orlando Office Space</li>
+            <li>5401 S. Kirkman Rd, Suite 310</li>
+            <li>Orlando, FL 32819 · EUA</li>
+            <li><a href="mailto:southagriusa@southagri.com">southagriusa@southagri.com</a></li>
+            <li>WeChat: southagrobusiness</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-middle">
+        <div class="footer-contact-links">
+          <a href="mailto:contato@southagri.com">E-mail comercial</a>
+          <a href="tel:+554732041039">Telefone</a>
+          <a href="https://api.whatsapp.com/send?phone=5547999221749" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="#top">Voltar ao topo ↑</a>
+        </div>
+        <div class="footer-social" aria-label="Canais de atendimento direto">
+          <span class="footer-social-label">Atendimento direto</span>
+          <a href="mailto:contato@southagri.com" aria-label="Enviar e-mail"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+          <a href="tel:+554732041039" aria-label="Ligar para a South Agri"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=5547999221749" target="_blank" rel="noopener noreferrer" aria-label="Falar com a South Agri pelo WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2015–2026 South Agri · CNPJ 19.325.465/0001-40. Todos os direitos reservados.</div>
+        <div class="footer-legal">
+          <a href="#top">Política de privacidade</a>
+          <a href="#top">Termos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    (() => {
+      const slides = [...document.querySelectorAll('.hero-slide')];
+      const dots = [...document.querySelectorAll('.dot')];
+      const interval = 6500;
+      let current = 0;
+      let timer;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const heroTransitionOverlay = document.getElementById('hero-transition-overlay');
+      let isHeroTransitioning = false;
+
+      function applySlide(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === current);
+          const line = slide.querySelector('.progress-line');
+          if (line) {
+            line.classList.remove('running');
+            if (i === current) void line.offsetWidth;
+            if (i === current) line.classList.add('running');
+          }
+          const video = slide.querySelector('video.hero-video');
+          if (video) {
+            if (i === current) {
+              const playback = video.play();
+              if (playback && typeof playback.catch === 'function') playback.catch(() => { });
+            } else {
+              video.pause();
+              video.currentTime = 0;
+            }
+          }
+        });
+
+        document.querySelectorAll('.dots').forEach(group => {
+          [...group.querySelectorAll('.dot')].forEach((dot, i) => {
+            const active = i === current;
+            dot.classList.toggle('active', active);
+            dot.toggleAttribute('aria-current', active);
+          });
+        });
+
+        if (!reduceMotion && window.gsap) {
+          const copy = slides[current].querySelectorAll('.hero-card h2, .hero-card p, .hero-card .cta');
+          gsap.killTweensOf(copy);
+          gsap.fromTo(copy, { autoAlpha: 0, y: 18 }, {
+            autoAlpha: 1,
+            y: 0,
+            duration: .58,
+            delay: .05,
+            stagger: .07,
+            ease: 'power2.out'
+          });
+        }
+      }
+
+      function showSlide(index, immediate = false) {
+        const target = (index + slides.length) % slides.length;
+
+        if (immediate || reduceMotion || !window.gsap || !heroTransitionOverlay) {
+          applySlide(target);
+          restartTimer();
+          return;
+        }
+
+        if (target === current || isHeroTransitioning) {
+          restartTimer();
+          return;
+        }
+
+        isHeroTransitioning = true;
+        clearTimeout(timer);
+        gsap.killTweensOf(heroTransitionOverlay);
+
+        gsap.timeline({
+          onComplete: () => {
+            isHeroTransitioning = false;
+            restartTimer();
+          }
+        })
+          .to(heroTransitionOverlay, {
+            autoAlpha: 1,
+            duration: .20,
+            ease: 'power2.in'
+          })
+          .add(() => applySlide(target))
+          .to(heroTransitionOverlay, {
+            autoAlpha: 0,
+            duration: .32,
+            ease: 'power2.out'
+          });
+      }
+
+      function restartTimer() {
+        clearTimeout(timer);
+        timer = setTimeout(() => showSlide(current + 1), interval);
+      }
+
+      document.addEventListener('click', event => {
+        const next = event.target.closest('[data-next]');
+        const prev = event.target.closest('[data-prev]');
+        const dot = event.target.closest('.dot');
+        if (next) showSlide(current + 1);
+        if (prev) showSlide(current - 1);
+        if (dot) showSlide(Number(dot.dataset.slide));
+      });
+
+      const megaMenu = document.getElementById('mega-menu');
+      const megaTitle = document.getElementById('mega-title');
+      const megaTabs = document.getElementById('mega-tabs');
+      const megaContent = document.getElementById('mega-content');
+      const megaFeatured = document.getElementById('mega-featured');
+      const languageSelectors = [...document.querySelectorAll('[data-language-selector]')];
+
+      function closeLanguageMenus(except) {
+        languageSelectors.forEach(selector => {
+          if (selector === except) return;
+          const toggle = selector.querySelector('.language-toggle');
+          const menu = selector.querySelector('.language-menu');
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.hidden = true;
+        });
+      }
+
+      languageSelectors.forEach(selector => {
+        const toggle = selector.querySelector('.language-toggle');
+        const menu = selector.querySelector('.language-menu');
+        toggle.addEventListener('click', event => {
+          event.stopPropagation();
+          const shouldOpen = menu.hidden;
+          closeLanguageMenus(selector);
+          menu.hidden = !shouldOpen;
+          toggle.setAttribute('aria-expanded', String(shouldOpen));
+        });
+      });
+
+      const menuData = {
+        industries: {
+          title: 'Nossa atuação',
+          tabs: ['Originação', 'Comercialização', 'Logística', 'Distribuição'],
+          heading: 'Cadeia agrícola integrada',
+          groups: [['Na origem', ['Produtores e fazendas', 'Cooperativas', 'Cerealistas', 'Regiões produtoras']], ['No mercado internacional', ['Importadores', 'Modalidade FOB', 'Modalidade CFR', 'Distribuição global']]]
+        },
+        services: {
+          title: 'Serviços',
+          tabs: ['Exportação', 'Frete marítimo', 'Afretamento', 'Gestão de risco'],
+          heading: 'Comércio exterior e logística',
+          groups: [['Soluções comerciais', ['Originação agrícola', 'Exportação de commodities', 'Assessoria tributária e logística', 'Gestão de risco']], ['Soluções logísticas', ['Frete marítimo', 'Afretamento de navios', 'Cargas conteinerizadas', 'Granéis sólidos e Panamax']]]
+        },
+        about: {
+          title: 'South Agri',
+          tabs: ['Empresa', 'Como atuamos', 'Alcance global'],
+          heading: 'Sobre a South Agri',
+          groups: [['Conheça a empresa', ['Empresa', 'Atuação', 'Produtos']], ['Conecte-se', ['Contato', 'Matriz no Brasil', 'Filial nos Estados Unidos']]]
+        }
+      };
+
+      function renderMobileMenu() {
+        megaMenu.classList.remove('about-menu');
+        megaTitle.textContent = 'Menu';
+        megaTabs.innerHTML = '';
+        megaFeatured.innerHTML = '';
+        megaContent.innerHTML = `
+          <nav class="mobile-nav-panel" aria-label="Menu mobile">
+            <a href="#home">Início</a>
+            <a href="#company">Empresa</a>
+            <a href="#projects">Produtos</a>
+            <div class="mobile-nav-group">
+              <span class="mobile-nav-label">Navegue</span>
+              <a href="#solutions">Serviços</a>
+              <a href="#areas">Atuação</a>
+              <a href="links.html">Links úteis</a>
+              <a href="#contact">Contato</a>
+            </div>
+          </nav>`;
+        megaContent.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenus));
+      }
+
+      function renderMenu(key) {
+        const data = menuData[key];
+        megaMenu.classList.toggle('about-menu', key === 'about');
+        megaTitle.textContent = data.title;
+        if (key === 'about') {
+          megaTabs.innerHTML = '';
+          megaContent.innerHTML = `
+            <div class="about-menu-line"><h3>South Agri</h3><a href="#company">Conheça a empresa <span class="link-arrow">→</span></a></div>
+            <div class="about-menu-rule"></div>
+            <ul class="about-menu-list">
+              <li><a href="#company">Empresa</a></li>
+              <li><a href="#areas">Como atuamos</a></li>
+              <li><a href="#solutions">Serviços</a></li>
+              <li><a href="#projects">Produtos</a></li>
+              <li><a href="#contact">Contato</a></li>
+            </ul>
+            <h3 class="about-menu-subheading">Comércio e logística</h3>
+            <div class="about-menu-rule"></div>
+            <ul class="about-menu-list">
+              <li><a href="#solutions">Originação agrícola</a></li>
+              <li><a href="#solutions">Exportação</a></li>
+              <li><a href="#solutions">Frete marítimo</a></li>
+              <li><a href="#solutions">Afretamento de navios</a></li>
+              <li><a href="#solutions">Gestão de risco</a></li>
+              <li><a href="#projects">Commodities</a></li>
+              <li><a href="#contact">Fale com a South Agri</a></li>
+            </ul>`;
+          megaFeatured.innerHTML = `
+            <img src="services.webp" alt="Imagem provisória para os serviços da South Agri">
+            <div class="mega-featured-copy">
+              <h3>Seu fornecedor confiável no Brasil</h3>
+              <p>Experiência comercial e logística para conectar commodities brasileiras aos mercados internacionais.</p>
+            </div>`;
+          return;
+        }
+        megaFeatured.innerHTML = '';
+        megaTabs.innerHTML = data.tabs.map((tab, i) => `<button type="button" class="${i === 0 ? 'active' : ''}">${tab}</button>`).join('');
+        megaContent.innerHTML = data.groups.map(group => `<div><h3>${group[0]}</h3><ul>${group[1].map(item => `<li><a href="#home">${item}</a></li>`).join('')}</ul></div>`).join('');
+        megaTabs.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+          megaTabs.querySelectorAll('button').forEach(tab => tab.classList.remove('active'));
+          button.classList.add('active');
+        }));
+      }
+
+      function closeMenus() {
+        megaMenu.classList.remove('open');
+        megaMenu.classList.remove('about-menu');
+        megaMenu.classList.remove('mobile-menu');
+        document.body.classList.remove('mobile-menu-open');
+        megaMenu.setAttribute('aria-hidden', 'true');
+        document.querySelectorAll('.nav-link.has-menu').forEach(button => button.setAttribute('aria-expanded', 'false'));
+        const mobileMenuButton = document.getElementById('mobile-menu-toggle');
+        if (mobileMenuButton) {
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+          mobileMenuButton.setAttribute('aria-label', 'Abrir menu');
+        }
+      }
+
+      function openMenu(button) {
+        const isOpen = megaMenu.classList.contains('open') && button.getAttribute('aria-expanded') === 'true';
+        closeMenus();
+        if (!isOpen) {
+          renderMenu(button.dataset.menu);
+          button.setAttribute('aria-expanded', 'true');
+          megaMenu.classList.add('open');
+          megaMenu.setAttribute('aria-hidden', 'false');
+        }
+      }
+
+      const siteHeader = document.querySelector('.site-header');
+      let hoverCloseTimer;
+      siteHeader.addEventListener('mouseenter', () => clearTimeout(hoverCloseTimer));
+      siteHeader.addEventListener('mouseleave', () => {
+        if (window.matchMedia('(min-width: 821px)').matches) {
+          hoverCloseTimer = setTimeout(closeMenus, 120);
+        }
+      });
+
+      document.querySelectorAll('.nav-link.has-menu').forEach(button => {
+        button.addEventListener('click', event => {
+          event.stopPropagation();
+          openMenu(button);
+        });
+        button.addEventListener('mouseenter', () => {
+          if (window.matchMedia('(min-width: 821px)').matches) openMenu(button);
+        });
+      });
+
+      const mobileMenu = document.getElementById('mobile-menu-toggle');
+      mobileMenu.addEventListener('click', event => {
+        event.stopPropagation();
+        const open = megaMenu.classList.contains('open') && megaMenu.classList.contains('mobile-menu');
+        if (open) {
+          closeMenus();
+          return;
+        }
+        closeMenus();
+        renderMobileMenu();
+        megaMenu.classList.add('mobile-menu', 'open');
+        document.body.classList.add('mobile-menu-open');
+        megaMenu.setAttribute('aria-hidden', 'false');
+        mobileMenu.setAttribute('aria-expanded', 'true');
+        mobileMenu.setAttribute('aria-label', 'Fechar menu');
+      });
+
+      document.addEventListener('click', event => {
+        if (!event.target.closest('[data-language-selector]')) closeLanguageMenus();
+        if (!event.target.closest('.site-header')) closeMenus();
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          closeLanguageMenus();
+          closeMenus();
+        }
+      });
+
+      const hero = document.querySelector('.hero');
+      hero.addEventListener('mouseenter', () => clearTimeout(timer));
+      hero.addEventListener('mouseleave', restartTimer);
+      showSlide(current, true);
+
+      const solutionData = [
+        {
+          title: 'Originação e comercialização',
+          description: 'Trabalhamos junto a produtores, cooperativas e cerealistas para desenvolver mercados, ampliar a liquidez e conectar a oferta brasileira a compradores no exterior.',
+          link: '#solutions',
+          image: 'img_serv.jpg'
+        },
+        {
+          title: 'Exportação agrícola',
+          description: 'Estruturamos exportações de grãos e outras commodities com assessoria comercial, tributária e logística, buscando eficiência e segurança em cada operação.',
+          link: '#solutions',
+          image: 'https://approjetos.com.br/wp-content/uploads/2023/07/Portos-e-Terminais.jpg'
+        },
+        {
+          title: 'Frete marítimo',
+          description: 'Oferecemos transporte oceânico para granéis sólidos e cargas conteinerizadas, com alternativas adequadas ao volume, ao porto e ao destino de cada embarque.',
+          link: '#solutions',
+          image: 'https://approjetos.com.br/wp-content/uploads/2023/07/Termicas-1.jpg'
+        },
+        {
+          title: 'Afretamento de navios',
+          description: 'Selecionamos a embarcação e a estrutura de afretamento mais adequadas para levar a carga ao porto certo, com segurança, pontualidade e controle operacional.',
+          link: '#solutions',
+          image: 'https://approjetos.com.br/wp-content/uploads/2023/07/Energias.jpg'
+        },
+        {
+          title: 'Gestão de risco',
+          description: 'Combinamos conhecimento do mercado de commodities, apoio financeiro e gestão de riscos para trazer maior previsibilidade às operações de fornecedores e compradores.',
+          link: '#solutions',
+          image: 'https://approjetos.com.br/wp-content/uploads/2023/07/Petroquimicas.jpg'
+        },
+        {
+          title: 'Soluções logísticas integradas',
+          description: 'Integramos transporte, armazenagem, infraestrutura portuária e distribuição para manter a cadeia de suprimentos eficiente da origem até o cliente final.',
+          link: '#solutions',
+          image: 'https://approjetos.com.br/wp-content/uploads/2023/07/Infra.jpg'
+        }
+      ];
+
+      const spotlightTitle = document.getElementById('spotlight-title');
+      const spotlightDescription = document.getElementById('spotlight-description');
+      const spotlightLink = document.getElementById('spotlight-link');
+      const spotlightImage = document.getElementById('spotlight-image');
+      document.querySelectorAll('.solution-tab').forEach(tab => tab.addEventListener('click', () => {
+        const data = solutionData[Number(tab.dataset.solution)];
+        document.querySelectorAll('.solution-tab').forEach(item => {
+          const active = item === tab;
+          item.classList.toggle('active', active);
+          item.setAttribute('aria-selected', String(active));
+        });
+        spotlightTitle.textContent = data.title;
+        spotlightDescription.textContent = data.description;
+        spotlightLink.href = data.link;
+        spotlightImage.style.opacity = '.2';
+        const nextImage = new Image();
+        nextImage.onload = () => {
+          spotlightImage.src = data.image;
+          spotlightImage.alt = data.title;
+          spotlightImage.style.opacity = '1';
+        };
+        nextImage.src = data.image;
+      }));
+
+      function initScrollMotion() {
+        const targets = [...document.querySelectorAll([
+          '.company-intro > *', '.stat-card',
+          '.solutions-intro > *', '.spotlight', '.solution-tab',
+          '.projects-intro > *', '.project-card',
+          '.areas-intro > *', '.area-card',
+          '.resources-intro > *', '.resource-feature', '.resource-row'
+        ].join(', '))];
+
+        targets.forEach(element => element.classList.add('scroll-reveal'));
+        if (reduceMotion) return;
+        targets.forEach(element => element.classList.add('motion-hidden'));
+
+        if (window.gsap && window.ScrollTrigger) {
+          window.gsap.registerPlugin(window.ScrollTrigger);
+          targets.forEach((element, index) => {
+            window.gsap.fromTo(element, { autoAlpha: 0, y: 30 }, {
+              autoAlpha: 1,
+              y: 0,
+              duration: .8,
+              delay: (index % 3) * .05,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: element,
+                start: 'top 88%',
+                once: true
+              }
+            });
+          });
+
+        } else {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: .12, rootMargin: '0px 0px -7% 0px' });
+          targets.forEach(element => observer.observe(element));
+        }
+      }
+
+      initScrollMotion();
+      window.addEventListener('load', () => {
+        if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+      }, { once: true });
+    })();
+  </script>
+</body>
+
+</html>
