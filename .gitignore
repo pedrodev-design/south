@@ -1,3 +1,2 @@
-dist/
-*.tar.gz
-*.mp4
+dist/ 
+*.tar.gz 
